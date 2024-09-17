@@ -1,0 +1,18 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="linkedin_username">LinkedIn Kullanıcı Adı:</label><br>
+    <input type="text" id="linkedin_username" name="linkedin_username"><br>
+    <label for="linkedin_password">LinkedIn Şifre:</label><br>
+    <input type="password" id="linkedin_password" name="linkedin_password"><br>
+    <label for="company_name">Şirket İsmi:</label><br>
+    <input type="text" id="company_name" name="company_name"><br><br>
+    <input type="submit" value="Ara">
+  </form>
+  
+  {% if company_info %}
+    <h2>Şirket Bilgileri:</h2>
+    <p>İsim: {{ company_info.Name }}</p>
+    <p>URL: {{ company_info.URL }}</p>
+    <p>Açıklama: {{ company_info.Description }}</p>
+  {% endif %}
+  
