@@ -1,13 +1,13 @@
 {
     "builds": [{
-      "src": "linkedin_project/wsgi.py",
+      "src": "linkedin_project_django/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.5" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "linkedin_project/wsgi.py"
+        "dest": "linkedin_project_django/wsgi.py"
       }
     ]
 }
